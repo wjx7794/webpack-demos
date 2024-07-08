@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.0",
+    "lodash": "^4.17.21",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "name": "webpack-demo8",
+  "module": "src/index.js"
+}

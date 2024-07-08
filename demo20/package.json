@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.5",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=development name=Jack webpack --config webpack.config.js",
+    "startx": "cross-env NODE_ENV=development webpack serve --open --config webpack.dev.js",
+    "build1": "webpack --env prod a=b",
+    "build2": "webpack --env prod a=b=c",
+    "build3": "webpack --env prod a.b=c a.c=d",
+    "build4": "webpack --node-env prod",
+    "start": "webpack serve --open --config webpack.config.js --env prod"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "mini-svg-data-uri": "^1.4.4"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "exports-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "imports-loader": "^5.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

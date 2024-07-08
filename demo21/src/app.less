@@ -1,0 +1,36 @@
+#root {
+  h2 {
+    font-size: 20px;
+  }
+  .smallImg {
+    width: 69px;
+    height: 75px;
+    background: url('@/assets/imgs/5kb.png') no-repeat;
+  }
+  .bigImg {
+    width: 232px;
+    height: 154px;
+    background: url('@/assets/imgs/22kb.png') no-repeat;
+  }
+
+  @font-face {
+    font-family: 'MyFont';
+    src: url('@/assets/fonts/my-font.woff2') format('woff2'),
+      url('@/assets/fonts/my-font.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .hello {
+    color: skyblue;
+    font-family: 'MyFont';
+  }
+
+  .noUse {
+    color: #000;
+  }
+
+  .ant-reserved {
+    background-color: red;
+  }
+}
