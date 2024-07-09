@@ -45,7 +45,7 @@ module.exports = {
         test: /\.js$/,
         use: [
           {
-            loader: 'gLoader',
+            loader: 'loader4',
             options: {
               a: 1,
             },
