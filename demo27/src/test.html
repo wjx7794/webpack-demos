@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <div id="notice"></div>
+
+    <script>
+      const notice = document.querySelector('#notice');
+      const input = document.querySelector('#input');
+
+      const obj = {};
+      // Object.defineProperty(obj, 'content', {
+      //   get() {
+      //     return this._content || '';
+      //   },
+      //   set(val) {
+      //     this._content = val;
+      //     input.val = val;
+      //     notice.innerHTML = val;
+      //   },
+      // });
+      const proxy = new Proxy(obj, {
+        get(target, key, proxy) {
+          return Reflect.get(...arguments);
+        },
+        set(target, key, value, proxy) {
+          input.value = value;
+          notice.innerHTML = value;
+          return Reflect.set(...arguments);
+        },
+      });
+
+      input.addEventListener('input', (e) => {
+        console.log(e.target.value);
+        // obj.content = e.target.value;
+        proxy.content = e.target.value;
+      });
+    </script>
+  </body>
+</html>
