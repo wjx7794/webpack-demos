@@ -10,5 +10,8 @@
   "dependencies": {
     "lodash": "^4.17.21"
   },
-  "sideEffects": ["./src/index.js", "*.css"]
+  "sideEffects": [
+    "./src/index.js",
+    "*.css"
+  ]
 }
