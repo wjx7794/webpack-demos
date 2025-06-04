@@ -8,6 +8,6 @@
   "scripts": {
     "build": "webpack"
   },
-  "name": "webpack-demo8",
+  "name": "webpack-numbers",
   "module": "src/index.js"
 }
