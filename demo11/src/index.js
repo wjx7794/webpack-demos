@@ -1,6 +1,6 @@
 import printMe from './print.js';
 import { cube } from './math.js';
-// import './styles.css';
+import './styles.css';
 
 function component() {
   const element = document.createElement('pre');

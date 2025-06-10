@@ -8,7 +8,7 @@ module.exports = {
   //   minimize: false,
   // },
 
-  // 🌟 start
+  /**------------------------- start -------------------------*/
   // 通过 import 和 export 语法，我们已经找出需要删除的死代码，然而，不仅仅是要找出，还应在 bundle 中删除它们。
   mode: 'production',
   module: {
@@ -16,11 +16,11 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        // sideEffects: true,
+        sideEffects: true,
       },
     ],
   },
-  // 🌟 end
+  /**------------------------- end -------------------------*/
 
   entry: {
     index: './src/index.js',

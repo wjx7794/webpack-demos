@@ -9,6 +9,7 @@ export function cube(x) {
 function double(x) {
   return x * x;
 }
+
 /*#__PURE__*/ console.log(double(10));
 
 export const Info = { name: 'Ryan' };
