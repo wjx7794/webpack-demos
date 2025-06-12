@@ -1,5 +1,3 @@
-// import printMe from './print.js';
-
 const { file, parse } = require('./globals.js');
 console.log(file);
 parse();
@@ -15,7 +13,10 @@ function component() {
   this.alert("Hmmm, this probably isn't a great idea...");
 
   btn.innerHTML = 'Click me and check the console!';
-  // btn.onclick = printMe;
+  btn.addEventListener('click', async () => {
+    const printMe = await import('./print.js');
+    printMe.default(); // 注意动态导入返回 Promise
+  });
 
   element.appendChild(btn);
 
