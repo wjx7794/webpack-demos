@@ -12,12 +12,17 @@ module.exports = {
     // 清理后再生成 dist
     clean: true,
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    runtimeChunk: 'single',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'TypeScript',
     }),
   ],
-
   module: {
     rules: [
       {
@@ -30,5 +35,5 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
 };
