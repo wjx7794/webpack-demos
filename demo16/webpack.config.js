@@ -10,7 +10,6 @@ module.exports = {
   // 开启 sourceMap
   devtool: 'inline-source-map',
 
-  /* 🌟 start */
   devServer: {
     // 告诉 dev server 应从什么位置开始查找文件
     static: {
@@ -23,7 +22,6 @@ module.exports = {
   optimization: {
     runtimeChunk: 'single',
   },
-  /* 🌟 end */
 
   entry: {
     index: './src/index.js',
