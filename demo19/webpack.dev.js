@@ -16,7 +16,8 @@ module.exports = merge(common, {
   },
   // 输出
   output: {
-    publicPath: ASSET_PATH,
+    // publicPath: ASSET_PATH,
+    publicPath: '', // 🔴 留空，避免覆盖运行时设置
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,

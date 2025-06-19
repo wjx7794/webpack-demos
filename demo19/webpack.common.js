@@ -14,7 +14,7 @@ module.exports = {
     // 告诉 dev server 应从什么位置开始查找文件
     static: {
       directory: path.join(__dirname, './dist'),
-      publicPath: ASSET_PATH,
+      publicPath: '/new/',
     },
     port: 3000,
   },
@@ -22,19 +22,10 @@ module.exports = {
   optimization: {
     runtimeChunk: 'single',
   },
-  // entry: {
-  //   index: './src/index.js',
-  //   print: './src/print.js',
-  // },
-  // output: {
-  //   publicPath: ASSET_PATH,
-  //   filename: '[name].bundle.js',
-  //   path: path.resolve(__dirname, 'dist'),
-  //   clean: true,
-  // },
   plugins: [
     new HtmlWebpackPlugin({
       title: '资源模块',
+      // publicPath: '/new/', // 显式传递变量到 HTML（需与 __webpack_public_path__ 一致）
     }),
     new webpack.DefinePlugin({
       'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),

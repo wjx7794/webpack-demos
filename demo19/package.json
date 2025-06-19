@@ -19,5 +19,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "mini-svg-data-uri": "^1.4.4"
-  }
+  },
+  "sideEffects": [
+    "**/*.js"
+  ]
 }
