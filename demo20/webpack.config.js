@@ -3,8 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = function (env, argv) {
-  console.log('🌟env>>>', env);
-  console.log('process.env.name>>>', process.env.name);
+  console.log('🌟 env =>', env);
+  console.log('🍃 process.env.name =>', process.env.name);
+  console.log('🍂 NODE_ENV =>', process.env.NODE_ENV);
+
   return {
     mode: env.prod ? 'production' : 'development',
     // 开启 sourceMap
